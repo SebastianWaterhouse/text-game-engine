@@ -16,6 +16,8 @@ JSON-extensible engine written in Python for Zork-like games
 
 ## Changelog
 
+- `0.025` "begin 0.03"
+  - Mostly finished transition to 0.03
 - `0.021` "instructions"
   - Updated readme
      - Added "to use" section

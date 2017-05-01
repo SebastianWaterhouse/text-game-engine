@@ -1,0 +1,38 @@
+{
+	"a0":{
+		"begin":"#dualtest",
+		"run":"null",
+		"loop":"a0loop",
+		"responses":{
+			"blanks":"a0loop",
+			"affirmatives":"a1",
+			"negatives":"a2"
+		}
+	},
+
+	"a0loop":{
+		"begin":"what?",
+		"run":"null",
+		"loop":"a0loop",
+		"responses":{
+			"blanks":"a0loop",
+			"affirmatives":"a1",
+			"negatives":"a2"
+		}
+	},
+
+	"a1":{
+		"begin":"#angryleave",
+		"run":"funcs.exit0()"
+	},
+
+	"a2":{
+		"begin":"#disappointedleave",
+		"run":"funcs.exit0()"
+	},
+
+	"a3":{
+		"begin":"#newcattest",
+		"run":"funcs.exit0()"
+	}
+}

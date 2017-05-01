@@ -1,0 +1,7 @@
+{
+	"categories":{
+		"blanks":["", "um"],
+		"affirmatives":["yes", "yeah", "yep", "sure", "i guess", "i suppose", "absolutely", "indubitably", "certainly"],
+		"negatives":["no", "nope", "not really", "i don't think so", "i dont think so", "absolutely not"]
+	}
+}

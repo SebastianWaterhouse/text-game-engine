@@ -1,0 +1,33 @@
+{
+	"a0":{
+		"begin":"ooh",
+		"run":"null",
+		"loop":"a0loop",
+		"responses":{
+			"blanks":"a0loop",
+			"affirmatives":"a1",
+			"negatives":"a2"
+		}
+	},
+
+	"a0loop":{
+		"begin":"hello?",
+		"run":"null",
+		"loop":"a0loop",
+		"responses":{
+			"blanks":"a0loop",
+			"affirmatives":"a1",
+			"negatives":"a2"
+		}
+	},
+
+	"a1":{
+		"begin":"ooga",
+		"run":"funcs.exit0()"
+	},
+
+	"a2":{
+		"begin":"booga",
+		"run":"funcs.exit0()"
+	}
+}
