@@ -6,7 +6,8 @@
 		"responses":{
 			"blanks":"a0loop",
 			"affirmatives":"a1",
-			"negatives":"a2"
+			"negatives":"a2",
+			"exers":"a3"
 		}
 	},
 
@@ -17,7 +18,8 @@
 		"responses":{
 			"blanks":"a0loop",
 			"affirmatives":"a1",
-			"negatives":"a2"
+			"negatives":"a2",
+			"exers":"a3"
 		}
 	},
 

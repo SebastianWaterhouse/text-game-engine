@@ -3,28 +3,24 @@ import json, sys
 
 verbose = 0
 
-if sys.argv[-1] == "-v":
+args = sys.argv
+args.remove("main.py")
+
+if "-v" in args:
 	verbose = 1
-except:
-	pass
-
-default_package = "defualt"
-
-loader.loaded_packages=[default_package]
+	args.remove("-v")
 
 loader.packaged(loader.packagesl, verbose)
 
-if len(sys.argv) != 0:
-	for n in sys.argv:
-		loader.loaded_packages.append(n)
-else:
-	appendpackages(loader.loaded_packages, verbose)
+loaded_packages = loader.appendpackages(verbose)
 
-json_chooser(loader.loaded_packages, verbose)
+branchej = loader.json_chooser(loaded_packages, verbose)
 
-branchesj = json.loads(open("data/" + loader.branchej + "/branches.json"))
+branchej = loader.packagest[branchej]
 
-cat_aggregator()
+branchesj = json.loads(open("data/" + branchej + "/branches.json").read())
+
+catsj = loader.cat_aggregator(loader.sel_cats, verbose)
 
 sbranch = "a0"
 
@@ -35,8 +31,8 @@ while True:
 		eval(branch["run"])
 	respons = input("")
 	respons = respons.lower()
-	for retype in catsj["categories"]:
-		if respons in catsj["categories"][retype]:
+	for retype in catsj:
+		if respons in catsj[retype]:
 			respons = retype
 	if respons in branch["responses"]:
 		sbranch = branchesj[sbranch]["responses"][respons]

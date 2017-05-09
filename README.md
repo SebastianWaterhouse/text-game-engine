@@ -16,6 +16,14 @@ JSON-extensible engine written in Python for Zork-like games
 
 ## Changelog
 
+- `0.04` "finished!!!"
+  - Takes up 2 version numbers due to the size of the update
+  - Added support for modders to add their own packages
+     - Variety of package types: cats, for categories, branches, for new stories, and dual for both.
+     - Data loader
+     - Combines all category files loaded
+     - Chooses last branches file loaded for story
+  - Cleaned up code a bit.
 - `0.025` "begin 0.03"
   - Mostly finished transition to 0.03
 - `0.021` "instructions"
@@ -31,9 +39,10 @@ JSON-extensible engine written in Python for Zork-like games
 
 ## Plans
 
-- `0.03` "organization"
-  - Organize into folders
-  - Data loader
+- `0.05` "freedom"
+  - allow modders to add code of their own
+     - a sandbox so that they don't mess up your computer with viruses.
+     - code.py file, will integrate with existing code function.
 
 ### Possibilities
 
