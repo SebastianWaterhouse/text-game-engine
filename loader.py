@@ -8,9 +8,6 @@ sel_cats = []
 sel_packagesj = []
 packnrev = {}
 
-def dictreverse(origin):
-	return({x:y for x,y in origin.items()})
-
 def packaged(sel_packages, verbose):
 	for pack in sel_packages:
 		typee = json.loads(open("data/" + pack + "/desc.json").read())["type"]

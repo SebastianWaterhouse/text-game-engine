@@ -16,6 +16,11 @@ JSON-extensible engine written in Python for Zork-like games
 
 ## Changelog
 
+- `0.045` "updated code"
+  - Moved some things around
+  - Did some code cleaning
+  - Added error handling into main loop. Use the `-v` option to disable.
+  - Added some command line options help
 - `0.04` "finished!!!"
   - Takes up 2 version numbers due to the size of the update
   - Added support for modders to add their own packages
