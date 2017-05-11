@@ -14,3 +14,30 @@ def optionshelp():
 
 def dictreverse(origin):
 	return({x:y for x,y in origin.items()})
+
+class health:
+	def __init__(self, maxh):
+		self.maxh = maxh
+		self.current = maxh
+	def death(self):
+		print("You died.")
+		exit0()
+	def hurt(self, amt):
+		newh = self.current - amt
+		if newh > 0:
+			self.current - amt
+			print("You were damaged by " + str(amt) + " hitpoints. You are on " + str(newh) + ".")
+			self.current = newh
+		else:
+			self.death()
+	def heal(self, amt):
+		newh = self.current + amt
+		if newh > 100:
+			self.current = 100
+			diff = 100 - self.current
+			print("You were healed by " + str(diff) + " hitpoints. You are on 100.")
+		else:
+			self.current = self.current + amt
+			print("You were healed by " + str(amt) + " hitpoints. You are on " + str(newh) + ".")
+	def printhealth(self):
+		print("You are currently on " + str(self.current) + " hitpoints.")

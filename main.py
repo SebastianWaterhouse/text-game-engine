@@ -31,6 +31,8 @@ catsj = loader.cat_aggregator(loader.sel_cats, verbose)
 
 sbranch = "a0"
 
+playerh = funcs.health(100)
+
 while True:
 	try:
 		branch = branchesj[sbranch]

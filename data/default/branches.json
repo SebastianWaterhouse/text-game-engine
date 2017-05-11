@@ -4,7 +4,6 @@
 		"run":"null",
 		"loop":"a0loop",
 		"responses":{
-			"blanks":"a0loop",
 			"affirmatives":"a1",
 			"negatives":"a2"
 		}
@@ -15,7 +14,6 @@
 		"run":"null",
 		"loop":"a0loop",
 		"responses":{
-			"blanks":"a0loop",
 			"affirmatives":"a1",
 			"negatives":"a2"
 		}

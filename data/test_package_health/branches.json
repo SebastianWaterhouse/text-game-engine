@@ -1,0 +1,42 @@
+{
+	"a0":{
+		"begin":"Welcome",
+		"run":"playerh.printhealth()",
+		"loop":"a0loop",
+		"responses":{
+			"affirmatives":"b1",
+			"negatives":"c1"
+		}
+	},
+	"a0loop":{
+		"begin":"Affirmatives to harm, negatives to heal.",
+		"run":"null",
+		"loop":"a0loop",
+		"responses":{
+			"affirmatives":"b1",
+			"negatives":"c1"
+		}
+	},
+	"b1":{
+		"begin":"You were harmed by 10 hitpoints.",
+		"run":"playerh.hurt(10)",
+		"loop":"b1",
+		"responses":{
+			"affirmatives":"b2",
+			"negatives":"c1"
+		}
+	},
+	"b2":{
+		"begin":"You were harmed by 100 hitpoints.",
+		"run":"playerh.hurt(100)"
+	},
+	"c1":{
+		"begin":"You were healed by 15 hitpoints.",
+		"run":"playerh.heal(10)",
+		"loop":"c1",
+		"responses":{
+			"affirmatives":"b1",
+			"negatives":"c1"
+		}
+	}
+}
