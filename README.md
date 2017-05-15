@@ -18,11 +18,11 @@ JSON-extensible engine written in Python for Zork-like games
 
 - `0.05` "things to do"
   - "info"
-     - expand functions available built-in
-  	 - will be composed of several mini-updates
-  -`0.05` "things to do - health"
-     - added functions pertaining to health
-     - Little bit janky. Expect polishing in 0.0505
+    - expand functions available built-in
+    - will be composed of several mini-updates
+  - `0.05` "things to do - health"
+    - added functions pertaining to health
+    - Little bit janky. Expect polishing in 0.0505
 - `0.045` "updated code"
   - Moved some things around
   - Did some code cleaning
