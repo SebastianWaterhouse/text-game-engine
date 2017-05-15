@@ -1,0 +1,8 @@
+{
+	"version":"0.06",
+	"entities":{
+		"player":{
+			"health":"100"
+		}
+	}
+}

@@ -1,8 +1,9 @@
-import funcs, loader
+import funcs, loader, saving
 import json, sys
 
 verbose = 0
 helpsyms = ["-h", "-help", "-man", "-manual", "-?"]
+version = "0.06"
 
 args = sys.argv
 args.remove("main.py")
@@ -18,20 +19,15 @@ if len(args) != 0:
 		sys.exit()
 
 loader.packaged(loader.packagesl, verbose)
-
 loaded_packages = loader.appendpackages(verbose)
-
 branchej = loader.json_chooser(loaded_packages, verbose)
-
 branchej = loader.packagest[branchej]
-
 branchesj = json.loads(open("data/" + branchej + "/branches.json").read())
-
 catsj = loader.cat_aggregator(loader.sel_cats, verbose)
 
 sbranch = "a0"
 
-playerh = funcs.health(100)
+
 
 while True:
 	try:

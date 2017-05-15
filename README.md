@@ -53,17 +53,22 @@ JSON-extensible engine written in Python for Zork-like games
 
 ## Plans
 
-- `0.051` "things to do - health expansion"
-  - add target specification to health
-- `0.052` "things to do - inventory"
-  - add functions relating to player inventory
 - `0.06` "save"
   - add functions relating to player saves
+  - json
 - `0.07` "sandbox"
   - a sandbox so that they don't mess up your computer with viruses.
 - `0.08` "freedom"
   - allow modders to add code of their own
      - code.py file, will integrate with existing code function.
+- `0.09` "combat"
+  - delayed to this point in order to make it have the features it needs
+  - JSON enemies
+  - add target specification to health
+- `0.10` "inventory"
+  - delayed to this point in order to make it have the features it needs
+  - JSON objects
+  - add functions relating to player inventory
 
 ### Possibilities
 
