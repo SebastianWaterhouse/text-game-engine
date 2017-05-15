@@ -24,9 +24,8 @@ class health:
 		exit0()
 	def hurt(self, amt):
 		newh = self.current - amt
+		print("You were damaged by " + str(amt) + " hitpoints. You are on " + str(newh) + ".")
 		if newh > 0:
-			self.current - amt
-			print("You were damaged by " + str(amt) + " hitpoints. You are on " + str(newh) + ".")
 			self.current = newh
 		else:
 			self.death()

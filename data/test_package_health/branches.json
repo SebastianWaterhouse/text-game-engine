@@ -18,7 +18,7 @@
 		}
 	},
 	"b1":{
-		"begin":"You were harmed by 10 hitpoints.",
+		"begin":"Damaging the player by 10 hitpoints.",
 		"run":"playerh.hurt(10)",
 		"loop":"b1",
 		"responses":{
@@ -27,12 +27,12 @@
 		}
 	},
 	"b2":{
-		"begin":"You were harmed by 100 hitpoints.",
+		"begin":"Damaging the player by 100 hitpoints.",
 		"run":"playerh.hurt(100)"
 	},
 	"c1":{
-		"begin":"You were healed by 15 hitpoints.",
-		"run":"playerh.heal(10)",
+		"begin":"Healing the player by 15 hitpoints.",
+		"run":"playerh.heal(15)",
 		"loop":"c1",
 		"responses":{
 			"affirmatives":"b1",
