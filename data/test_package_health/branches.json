@@ -1,7 +1,7 @@
 {
 	"a0":{
 		"begin":"Welcome",
-		"run":"playerh.printhealth()",
+		"run":"player.health.printhealth()",
 		"loop":"a0loop",
 		"responses":{
 			"affirmatives":"b1",
@@ -19,7 +19,7 @@
 	},
 	"b1":{
 		"begin":"Damaging the player by 10 hitpoints.",
-		"run":"playerh.hurt(10)",
+		"run":"player.health.hurt(10)",
 		"loop":"b1",
 		"responses":{
 			"affirmatives":"b2",
@@ -28,11 +28,11 @@
 	},
 	"b2":{
 		"begin":"Damaging the player by 100 hitpoints.",
-		"run":"playerh.hurt(100)"
+		"run":"player.health.hurt(100)"
 	},
 	"c1":{
 		"begin":"Healing the player by 15 hitpoints.",
-		"run":"playerh.heal(15)",
+		"run":"player.health.heal(15)",
 		"loop":"c1",
 		"responses":{
 			"affirmatives":"b1",

@@ -1,4 +1,6 @@
-class player:
-	def __init__(self, health):
-		self.health = health
+import funcs
+
+class entity:
+	def __init__(self, healthe):
+		self.health = funcs.health(healthe)
 	

@@ -1,8 +1,10 @@
 {
+	"branchf":"null",
 	"version":"0.06",
+	"branch":"a0",
 	"entities":{
 		"player":{
-			"health":"100"
+			"health":100
 		}
 	}
 }

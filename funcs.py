@@ -8,7 +8,7 @@ def optionshelp():
 	print("This is an engine for a text-based game. There is very little included with it by default. Search out additional packages for actual content.")
 	print("")
 	print("Options:")
-	print("-v : verbose mode")
+	print("-v : verbose mode (semi-implemented)")
 	print("-(?/h/help/man/manual) : help")
 	sys.exit()
 

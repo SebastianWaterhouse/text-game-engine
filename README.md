@@ -16,10 +16,11 @@ JSON-extensible engine written in Python for Zork-like games
 
 ## Changelog
 
+- `0.06` "saves"
+  - json saves storing a variety of variables
+  - I sure am going to have fun making this work with modder-added script!
+  - Just type `save` to save.
 - `0.05` "things to do"
-  - "info"
-    - expand functions available built-in
-    - will be composed of several mini-updates
   - `0.05` "things to do - health"
     - added functions pertaining to health
     - Little bit janky. Expect polishing in 0.0505
@@ -53,9 +54,6 @@ JSON-extensible engine written in Python for Zork-like games
 
 ## Plans
 
-- `0.06` "save"
-  - add functions relating to player saves
-  - json
 - `0.07` "sandbox"
   - a sandbox so that they don't mess up your computer with viruses.
 - `0.08` "freedom"

@@ -1,26 +1,78 @@
-import os, json, main
+import os, json
 
-availsaves = os.walk("saves")
+availsaves = next(os.walk("saves"))[2]
+availsaves.remove("default.json")
 
 def loadsave(target):
-	return(json.loads(open("saves/" + target + ".json").read()))
+	return(json.loads(open("saves/" + str(target) + ".json").read()))
 
 def unpacksave(save):
-	x = save["entitites"]["player"]["health"]
-	z = {"health":x}
+	h = save["entities"]["player"]["health"]
+	cb = save["branch"]
+	bf = save["branchf"]
+	v = save["version"]
+	bf = json.loads(open("data/" + bf + "/desc.json").read())["name"]
+	z = {"health":h, "branch":cb, "branchf":bf, "version":v}
 	return(z)
 
-def createsavedata(playerloc):
+def createsavedata(vers, playerh, cbranch, branchf):
 	y = {
-		"version":main.version,
-		"entitities":{
+		"branchf":branchf,
+		"version":vers,
+		"branch":cbranch,
+		"entities":{
 			"player":{
-				"health":main.playerloc.health
+				"health":playerh
 			}
 		}
 	}
 	return(y)
 
 def save(data, slot):
-	dire = "saves" + slot + ".json"
-	json.dump(data, dire)
+	dire = "saves/" + str(slot) + ".json"
+	with open(dire, "w") as direct:
+		json.dump(data, direct)
+		print("Saving to slot " + str(slot))
+
+def tosave():
+	c = []
+	e = True
+	while e == True:
+		print("What slot would you like to save to? Must be a number: ")
+		a = input("")
+		try:
+			a = int(a)
+			for b in availsaves:
+				c.append(b[0])
+			print(c)
+			if str(a) in c:
+				print("Are you sure you would like to overwrite slot " + str(a) + "?")
+				d = input("Y/N: ")
+				d = d.lower()
+				if d == "y":
+					e = False
+			else:
+				e = False
+		except ValueError:
+			print("Not a number!")
+	return(a)
+
+def toload(verbose):
+	c = []
+	e = True
+	while e == True:
+		print("What slot would you like to load? Must be a number: ")
+		a = input("")
+		try:
+			a = int(a)
+			for b in availsaves:
+				c.append(b[0])
+			print(c)
+			if str(a) in c:
+				print("Loading save " + str(a) + "!")
+				e = False
+			else:
+				print("That save is not available.")
+		except ValueError:
+			print("Not a number!")
+	return(a)
